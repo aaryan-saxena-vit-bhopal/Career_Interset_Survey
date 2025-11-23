@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Career Interest Survey Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .score-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .highest {
+            background-color: #e6f7ff;
+            border-left: 5px solid #007bff;
+        }
+
+        .second-highest {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+        }
+
+        .code {
+            font-size: 2em;
+            font-weight: bold;
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .score-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .score-list li {
+            margin-bottom: 5px;
+            background: #f4f4f4;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .careers {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body style="background-image: radial-gradient(circle, #a2d2ff, #bde0fe, #daeaf6);">
+
+    <h1>🏆 Career Interest Survey Result</h1>
+    <br>
+    <br>
+    <marquee style="font-size: 20px;" height="30" bgcolor="c6def1" scrollamount="10">Based on the *Holland Codes
+        (RIASEC)* model here are the results and recomended career options for the questions answered. </marquee>
+    <br>
+    <br>
+
+
+    <h2>Your Top Two Types: *{{ data.highest_code }}* and *{{ data.second_highest_code }}*</h2>
+
+    <div class="score-card highest">
+        <span class="code">{{ data.highest_code }}</span>
+        <div>
+            <h3>1st Highest: {{ data.highest_content.name }} (Score: {{ data.highest_score }})</h3>
+            <p>{{ data.highest_content.description }}</p>
+            <p class="careers">Suggested Careers: {{ data.highest_content.careers | join(', ') }}</p>
+        </div>
+    </div>
+
+    <div class="score-card second-highest">
+        <span class="code">{{ data.second_highest_code }}</span>
+        <div>
+            <h3>2nd Highest: {{ data.second_highest_content.name }} (Score: {{ data.second_highest_score }})</h3>
+            <p>{{ data.second_highest_content.description }}</p>
+            <p class="careers">Suggested Careers: {{ data.second_highest_content.careers | join(', ') }}</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>All Calculated Scores:</h3>
+    <ul class="score-list">
+        <li>R: {{ data.R }}</li>
+        <li>I: {{ data.I }}</li>
+        <li>A: {{ data.A }}</li>
+        <li>S: {{ data.S }}</li>
+        <li>E: {{ data.E }}</li>
+        <li>C: {{ data.C }}</li>
+    </ul>
+    <br></br>
+
+    <div class="card" style="width: 20rem;">
+
+        <img src="{{ url_for('static', filename='a.jpg') }}" class="card-img-top"
+            alt="Here lies a very beautiful picture." width="300" height="200">
+        <div class="card-body">
+            <h3 class="card-title"><b>Some other recommended careers!</b></h3>
+            <p class="card-text">A career should be something that aligns completely with your vibe and passion and
+                something that you enjoy, so making a decision should be completely unbiased.</p>
+            <a href = "/more" class = "btn btn-primary">Other recomended careers</a>
+            
+        </div>
+    </div>
+    <br></br>
+
+    <p><b>NOTE: This survey only looks up for certain range of available careeres, while the categories that your
+            perfect
+            dream career might be present here. So this survey only helps you to get a clearity about what you
+            might look out for in choosing your career!!!!</b></p>
+</body>
+
+</html>

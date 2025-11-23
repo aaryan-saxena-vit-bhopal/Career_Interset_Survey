@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Interest Survey (RIASEC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: radial-gradient(circle, #a2d2ff, #bde0fe, #daeaf6);">
+
+    <header>
+        <h1 style="text-align: center; font-size: 40px;">📝 Career Interest Survey</h1>
+        <br>
+        <br>
+        <marquee style="font-size: 20px;" height="30" bgcolor="c6def1" scrollamount="10">Based on the *Holland Codes (RIASEC)* model. Choose the activity you would *MOST ENJOY* (+2 points) and *LEAST ENJOY* (-1 point) for each question.</marquee>
+        <br>
+        <br>
+    </header>
+
+    <main>
+        <section id="survey-section">
+            <h2>✨✨Survey Questions✨✨</h2>
+            <form id="holland-survey" method = 'POST' action = '/'>
+
+                <div class="question-block" data-question-id="1">
+                    <h3>Question A. If you are to choose a task which would you prefer?</h3>
+                  <p> 1. Building a piece of furniture.</p> <!-- R -->
+                  <p> 2. Researching the history of an ancient culture..</p><!-- I -->
+                  <p> 3. Creating something new out of an unused material..</p><!-- A -->
+                  <p> 4. Create awareness among people regarding a social cause.</p><!-- S -->
+                  <p> 5. Leading and managing events and projects.</p><!-- E -->
+                  <p> 6. Organizing files and creating detailed records..</p><!-- C -->
+    
+                    <div class="choice-group">
+                       <b> <label for="most-enjoy-A">Most Enjoy:</label></b>
+                        <select name="qma" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="choice-group">
+                        <b><label for="least-enjoy-A">Least Enjoy:</label></b>
+                        <select name="qla" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+
+                <div class="question-block" data-question-id="2">
+                    <h3>Question B. If you are to pick from one of the following, what would you choose?</h3>
+                    <p> 1. Planting and taking care of plants and trees.</p><!-- R -->
+                    <p> 2. Creating a platform for people to interact and reach each other.</p><!-- I -->
+                    <p> 3. Writing a short story.</p><!-- A -->
+                    <p> 4. Counseling a person on a personal problem.</p><!-- S -->
+                    <p> 5. Debating a new business idea and developing a strategy.</p><!-- E -->
+                    <p> 6. Arranging data and mainting a proper order.</p><!-- C -->
+
+                    <div class="choice-group">
+                     <b>   <label for="most-enjoy-B">Most Enjoy:</label></b>
+                        <select id="most-enjoy-2" name="qmb" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="choice-group">
+                        <b>   <label for="least-enjoy-B">Least Enjoy:</label> </b>  
+                        <select id="least-enjoy-2" name="qlb" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+                <div class="question-block" data-question-id="2">
+                    <h3>Question C. If you are to do one of the following chore, which one would you choose?</h3>
+                    <p> 1. Fixing a broken machine or electrical wiring.</p><!-- R -->
+                    <p> 2. Performing an experiment to test a scientific theory.</p><!-- I -->
+                    <p> 4. Creating a resin art studio.</p><!-- A -->
+                    <p> 5. Delivering Wisdom through speech.</p><!-- S -->
+                    <p> 3. Managing a sales team to reach ambitious targets.</p><!-- E -->
+                    <p> 6. Managing and maintaining a library.</p><!-- C -->
+
+                    <div class="choice-group">
+                         <b>  <label for="most-enjoy-C">Most Enjoy:</label> </b>  
+                        <select id="most-enjoy-2" name="qmc" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="choice-group">
+                         <b>  <label for="least-enjoy-C">Least Enjoy:</label> </b>  
+                        <select id="least-enjoy-2" name="qlc" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+                <div class="question-block" data-question-id="2">
+                    <h3>Question D. Which of the following missions match your vibe?</h3>
+                    <p> 1. Cooking cuisines.</p><!-- R -->
+                    <p> 2. Find out about various wonders of nature.</p><!-- I -->
+                    <p> 3. Designing a website or a visual advertisement.</p><!-- A -->
+                    <p> 4. Teaching a group a new skill or concept.</p><!-- S -->
+                    <p> 5. Debating and arguing about a fact or thesis.</p><!-- E -->
+                    <p> 6. Proofreading a document for errors and precise formatting.</p><!-- C -->
+                    
+                    <div class="choice-group">
+                      <b>     <label for="most-enjoy-D">Most Enjoy:</label> </b>  
+                        <select id="most-enjoy-2" name="qmd" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="choice-group">
+                        <b>   <label for="least-enjoy-D">Least Enjoy:</label> </b>  
+                        <select id="least-enjoy-2" name="qld" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+                <div class="question-block" data-question-id="2">
+                    <h3>Question E. Which one of the following do you find most exciting?</h3>
+                    <p> 1. Working outdoors on a farm or in a park.</p><!-- R -->
+                    <p> 2. Analyzing data to predict market trends.</p><!-- I -->
+                    <p> 2. Creating new music or songs.</p><!-- A -->
+                    <p> 4. Upbringing country's economy.</p><!-- S -->
+                    <p> 5. Overseeing the opening of a new department or store.</p><!-- E -->
+                    <p> 6. Keeping check and maintaing record of the spending and taxes.</p><!-- C -->
+
+                    <div class="choice-group">
+                       <b>    <label for="most-enjoy-E">Most Enjoy:</label> </b>  
+                        <select id="most-enjoy-2" name="qme" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="choice-group">
+                        <b>   <label for="least-enjoy-E">Least Enjoy:</label> </b>  
+                        <select id="least-enjoy-2" name="qle" required>
+                            <option value="">Select Option...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <p class="error-message"></p>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate My Results</button>
+            </form>
+        </section>
+
+        <section id="results-section" style="display:none;">
+            <h2>💡 Your Career Interest Profile</h2>
+            
+            <div id="holland-code">
+                <h3>Your Holland Code: <span id="code-result"></span></h3>
+            </div>
+
+            <div id="score-details">
+                <h3>Score Breakdown</h3>
+                </div>
+
+            <div id="career-suggestions">
+                <h3>Suggested Career Paths</h3>
+                </div>
+            
+            <button onclick="window.location.reload()">Take Survey Again</button>
+        </section>
+
+    </main>
+
+    <script src="survey.js"></script>
+</body>
+</html>

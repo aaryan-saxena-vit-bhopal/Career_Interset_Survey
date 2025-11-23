@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Interest Survey (RIASEC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: radial-gradient(circle, #a2d2ff, #bde0fe, #daeaf6);">
+
+    <header>
+        <h1 style="text-align: center; font-size: 40px;">📝 Career Interest Survey</h1>
+        <br>
+        <br>
+        <marquee style="font-size: 20px;" height="30" bgcolor="c6def1" scrollamount="10">Based on the **Holland Codes (RIASEC)** model here are some other recommended career options. </marquee>
+        <br>
+        <br>
+    </header>
+
+    <main>
+        <section id="survey-section">
+            <h2>✨✨Some other recommended careers!✨✨</h2>
+            <div class="card-group">
+  <div class="card" style="width: 30rem;">
+    <img src="{{ url_for('static', filename='b.png') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">R: Realistic (Doers)</h3>
+      <p class="card-text">"Mechanical Engineer", "Skilled Trades (Plumber, Electrician)", "Chef", "Physical Therapist", "Horticulturist", "Police Officer"</p>
+    </div>
+
+  </div>
+  <div class="card"style="width: 30rem;">
+    <img src="{{ url_for('static', filename='c.jpg') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">I: Investigative (The Thinkers)</h3>
+      <p class="card-text">"Data Scientist", "Software Developer", "Research Analyst", "Physician", "Chemist", "Economist"</p>
+    </div>
+
+  </div>
+  <div class="card"style="width: 30rem;">
+    <img src="{{ url_for('static', filename='d.jpg') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">A: Artistic (The creaters)</h3>
+      <p class="card-text">"Graphic Designer", "Writer/Author", "Musician/Composer", "Architect", "Photographer", "Art Teacher"</p>
+    </div>
+   
+  </div>
+</div>
+<div class="card-group">
+  <div class="card"style="width: 30rem;">
+    <img src="{{ url_for('static', filename='e.jpeg') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">S: Social (The Helpers)</h3>
+      <p class="card-text">"Teacher/Professor", "Counselor/Therapist", "Social Worker", "Nurse", "Human Resources Specialist", "Clergy/Minister"</p>
+    </div>
+    
+  </div>
+  <div class="card"style="width: 30rem;">
+    <img src="{{ url_for('static', filename='f.jpg') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">E: Enterprising (The Persuaders)</h3>
+      <p class="card-text">"Sales Manager", "Lawyer", "Marketing Executive", "Entrepreneur", "Real Estate Agent", "Financial Manager"</p>
+    </div>
+    
+  </div>
+  <div class="card"style="width: 30rem;">
+    <img src="{{ url_for('static', filename='g.webp') }}" class="card-img-top" alt="A beautiful image here!"width="300" height="200">
+    <div class="card-body">
+      <h3 class="card-title">C: Conventional (The Organizers)</h3>
+      <p class="card-text">"Accountant", "Financial Analyst", "Librarian", "Bookkeeper", "Office Manager", "Auditor"</p>
+    
+  </div>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<p><b>NOTE: This survey only looks up for certain range of available careeres, while the categories that your perfect
+            dream career might be present here. So this survey only helps you to get a clearity about what you
+            might look out for in choosing your career!!!!</b></p> 
